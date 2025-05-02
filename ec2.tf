@@ -5,7 +5,7 @@ resource "aws_instance" "server" {
   subnet_id                   = aws_subnet.public_subnet[count.index].id
   vpc_security_group_ids      = [aws_security_group.web_sg.id]
   associate_public_ip_address = true
-
+  iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
 
   tags = {
     Name = "flask-server-ec2"

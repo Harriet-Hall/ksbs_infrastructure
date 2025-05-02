@@ -16,3 +16,29 @@ variable "azs" {
   description = "Availability Zones"
   default     = ["eu-west-2a", "eu-west-2b", "eu-west-2c"]
 }
+
+variable "db_username" {
+  type        = string
+  description = "username for postges db"
+  sensitive   = true
+}
+variable "db_password" {
+  type        = string
+  description = "password for postges db"
+  sensitive   = true
+}
+variable "db_host" {
+  type        = string
+  description = "host for postges db"
+  sensitive   = true
+}
+variable "db_port" {
+  type        = string
+  description = "port for postges db"
+  sensitive   = true
+}
+variable "db_database" {
+  type        = string
+  description = "database for postges db"
+  sensitive   = true
+}
